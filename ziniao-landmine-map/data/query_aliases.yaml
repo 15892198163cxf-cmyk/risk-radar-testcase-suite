@@ -1,0 +1,338 @@
+# Query aliases used by scripts/landmine.py.
+# Keep this file small and operational: only add aliases that users actually say or Feishu titles actually use.
+
+features:
+  书签:
+    aliases:
+      - 收藏
+      - 默认书签
+      - 店铺书签
+      - 文件夹
+      - 链接修改
+      - 跳转地址
+      - 已删除书签
+    prefer_ids:
+      - ZN-LM-BOOKMARK-DIRECT-001
+    weak_terms:
+      - 链接
+      - 文件夹
+  账号列表:
+    aliases:
+      - 账号管理
+      - 店铺账号
+      - 平台账号
+      - 电商平台账号
+      - 授权成员
+      - 标签筛选
+      - 附加账号
+      - 主账号
+      - 登录凭证
+      - 账号筛选
+      - 绑定设备
+      - 打开账号
+    prefer_ids:
+      - ZN-LM-ADMIN-ACCOUNT-AUTH-001
+      - ZN-FEISHU-CLUSTER-ACCOUNT-AUTH
+      - ZN-LM-ADMIN-LIST-FILTER-EXPORT-001
+  账号中心账号设置:
+    aliases:
+      - 账号中心
+      - 账号设置
+      - 紫鸟账号
+      - 登录账号
+      - 成员账号
+      - 绑定管理
+      - 安全中心
+      - 变更手机号
+      - 换绑手机号
+      - 移除授权接口
+      - 权限依赖
+    weak_terms:
+      - 账号
+      - 权限
+      - 设置
+  资源包升级:
+    aliases:
+      - 客户端升级
+      - 资源包
+      - 热更
+      - 升级弹窗
+      - old_version
+      - new_version
+      - 旧缓存
+    prefer_ids:
+      - ZN-LM-CLIENT-UPGRADE-RESOURCE-001
+      - ZN-FEISHU-CLUSTER-CLIENT-RESOURCE-UPGRADE
+      - ZN-LM-CLIENT-RESOURCE-HOTUPDATE-001
+  新内核:
+    aliases:
+      - 内核
+      - 火狐内核
+      - 无头模式
+      - headless
+      - F12
+      - 开发者模式
+      - UI调试
+    prefer_ids:
+      - ZN-LM-KERNEL-HEADLESS-001
+      - ZN-LM-CLIENT-DEVTOOLS-KERNEL-001
+      - ZN-FEISHU-CLUSTER-KERNEL-DEVTOOLS
+  打开店铺链路:
+    aliases:
+      - 打开店铺
+      - 启动店铺
+      - 店铺启动
+      - 批量启动
+      - 店铺检测页
+      - IP检测
+      - 代理
+      - cookie
+    weak_terms:
+      - 客户端
+      - 内核
+      - 店铺
+  本地端口:
+    aliases:
+      - 本地端口
+      - 端口分配
+      - 端口占用
+      - 端口兜底
+      - 本地服务
+      - 客户端和内核通信
+      - 内核通信
+    weak_terms:
+      - 客户端
+      - 店铺
+      - 打开
+  多开工作台:
+    aliases:
+      - 多开工作台
+      - 开启多开
+      - 多开
+      - 多工作台
+      - 工作台隔离
+      - 进程残留
+    weak_terms:
+      - 客户端
+      - 打开店铺
+  事中监管:
+    aliases:
+      - 安全监管
+      - 监管日志
+      - 告警
+      - 审批
+      - 预警
+    prefer_ids:
+      - ZN-LM-SECURITY-SUPERVISION-001
+      - ZN-FEISHU-CLUSTER-SECURITY-SUPERVISION
+  访问策略:
+    aliases:
+      - 访问策略
+      - 会员安全策略
+      - 策略生效
+      - 生效成员
+      - 网页资源管理
+      - 屏幕水印
+      - 页面拦截
+      - 元素拦截
+      - 禁用策略
+      - 启用策略
+    weak_terms:
+      - 安全监管
+      - 成员
+      - 部门
+      - 角色
+  首页账号动态:
+    aliases:
+      - 账号动态
+      - 首页动态
+      - 告警预览弹窗
+      - 首页运营避坑指南
+      - 首页埋点
+    weak_terms:
+      - 首页
+      - 账号
+  首页账户余额:
+    aliases:
+      - 账户余额
+      - 余额
+      - 余额明细
+      - 余额不足
+      - 费用余额
+      - 取消订单
+    weak_terms:
+      - 首页
+  复制账号:
+    aliases:
+      - 复制账号
+      - 复制店铺
+      - 店铺复制
+      - 复制接口
+    weak_terms:
+      - 账号
+  共享账号:
+    aliases:
+      - 共享账号
+      - 账号接收方
+      - 账号所有方
+      - 共享店铺
+      - 加载插件
+    weak_terms:
+      - 账号
+  设备回收站:
+    aliases:
+      - 设备回收站
+      - 账号回收站
+      - 清空设备回收站
+      - 彻底删除
+      - 删除最后一页
+      - 回收站
+    weak_terms:
+      - 设备
+      - 账号
+  自定义视图:
+    aliases:
+      - 自定义视图
+      - 视图
+      - 空格搜索
+      - filter_criteria
+      - viewList_type
+    weak_terms:
+      - 设备
+      - 账号
+  黑名单管理:
+    aliases:
+      - 黑名单
+      - 白名单
+      - 黑名单管理
+      - 域名过长
+      - 操作日志
+    weak_terms:
+      - 云号
+      - 管理
+  云号替换记录:
+    aliases:
+      - 云号替换
+      - 替换记录
+      - 替换记录列表
+      - 替换日志
+      - 替换回调
+      - 替换记录查询
+      - 记录表
+      - 变更记录
+      - 替换前云号
+      - 替换后云号
+      - 云号查不到
+    prefer_ids:
+      - ZN-LM-OPS-REPLACE-RECORD-001
+      - ZN-LM-OPS-LIST-QUERY-001
+      - ZN-LM-ADMIN-LIST-FILTER-EXPORT-001
+    weak_terms:
+      - 运维后台
+      - 云号
+      - 列表
+  添加成员:
+    aliases:
+      - 添加成员
+      - 创建成员
+      - 成员管理
+      - 新增成员
+      - 企业管理
+      - 企业登录密码
+      - 用户名
+      - 中间空格
+    weak_terms:
+      - 管理
+      - 成员
+  部门管理:
+    aliases:
+      - 部门管理
+      - 子部门
+      - 一级部门
+      - 成员导出
+      - 所有成员
+      - 角色管理
+      - 企业管理
+    weak_terms:
+      - 管理
+      - 成员
+  费用管理:
+    aliases:
+      - 费用管理
+      - 账户充值
+      - 账户余额
+      - 余额明细
+      - 订单管理
+      - 付费服务
+      - 发票
+      - 续费
+      - 权益
+      - 套餐
+    weak_terms:
+      - 服务
+      - 余额
+      - 订单
+  添加监管账号:
+    aliases:
+      - 添加监管账号
+      - 监管账号
+      - 监管对象
+      - 成员监管
+      - 生效账号
+      - 指定账号
+      - 告警方案
+    prefer_ids:
+      - ZN-LM-SECURITY-SUPERVISION-001
+      - ZN-FEISHU-CLUSTER-SECURITY-SUPERVISION
+    weak_terms:
+      - 账号
+  急需续费列表:
+    aliases:
+      - 急需续费
+      - 续费列表
+      - 即将到期
+      - 即将过期
+      - 续费入口
+      - 到期提醒
+      - 设备到期弹窗
+      - 去续费
+      - 立即查看
+    weak_terms:
+      - 账号
+      - 列表
+  缓存路径设置:
+    aliases:
+      - 缓存管理
+      - 文件下载设置
+      - 下载设置
+      - 下载弹窗
+      - 店铺文件下载路径
+      - 账号文件下载
+      - 账号临时缓存
+      - 紫鸟客户端缓存
+      - 缓存路径
+      - 内核缓存
+      - 内核下载文件
+      - 内核解压文件
+      - 路径冲突
+      - 安装目录
+      - 误删除
+      - 启动卡住
+    weak_terms:
+      - 客户端
+      - 设置
+      - 打开
+      - 路径
+
+global_weak_terms:
+  - 链接
+  - 列表
+  - 搜索
+  - 筛选
+  - 刷新
+  - 缓存
+  - 跳转
+  - 页面
+  - 管理
+  - 设置
+  - 打开

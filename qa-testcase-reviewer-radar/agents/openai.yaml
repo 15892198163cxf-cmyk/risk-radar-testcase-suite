@@ -1,0 +1,7 @@
+interface:
+  display_name: "QA Radar Testcase Reviewer"
+  short_description: "Review radar-assisted testcases and traceability"
+  default_prompt: "Use $qa-testcase-reviewer-radar to review the radar-assisted testcase suite against its requirement and canonical radar result."
+
+policy:
+  allow_implicit_invocation: false

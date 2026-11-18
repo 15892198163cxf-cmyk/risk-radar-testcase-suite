@@ -1,0 +1,4 @@
+interface:
+  display_name: "紫鸟雷区地图"
+  short_description: "测前召回紫鸟历史线上缺陷和测试经验中的高风险检查点"
+  default_prompt: "使用 $ziniao-landmine-map 分析这份紫鸟需求的历史复发风险和易漏检查点。"

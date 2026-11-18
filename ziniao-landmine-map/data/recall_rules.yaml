@@ -1,0 +1,46 @@
+# Recall ranking rules used by scripts/landmine.py.
+
+evidence_priority:
+  direct_bug: 300
+  tester_note: 260
+  feishu_online_bug: 240
+  derived_cluster: 170
+  feishu_cluster: 140
+  qa_inference: 60
+
+match_weights:
+  preferred_id: 500
+  canonical_feature: 120
+  alias_phrase: 90
+  exact_token: 18
+  substring: 6
+  evidence_exact_token: 8
+  evidence_substring: 3
+  weak_term_penalty: -20
+  confirmed_bonus: 25
+  seed_bonus: 8
+
+minimum_score: 180
+
+generic_cluster_ids:
+  - ZN-FEISHU-CLUSTER-OTHER-HIGH-FREQ
+
+suppress_generic_cluster_when_specific_score: 250
+
+output_groups:
+  direct:
+    label: 历史线上 Bug 直接命中
+    sources:
+      - feishu_online_bug
+      - tester_note
+    evidence_levels:
+      - direct_bug
+  cluster:
+    label: 同类雷区推导
+    sources:
+      - derived_cluster
+      - feishu_cluster
+  supplemental:
+    label: 建议补充检查
+    sources:
+      - qa_inference

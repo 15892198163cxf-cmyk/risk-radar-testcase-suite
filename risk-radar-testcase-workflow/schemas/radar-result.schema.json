@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.skills/schemas/radar-result.schema.json",
+  "title": "Concise Risk Radar Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "radar_provider", "applicability", "summary", "risks", "questions", "evidence_boundaries"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "radar_provider": { "type": "string", "minLength": 1 },
+    "applicability": { "enum": ["applicable", "no_direct_match", "not_applicable"] },
+    "requirement_fingerprint": { "type": "string", "minLength": 1 },
+    "evidence_snapshot_id": { "type": "string", "minLength": 1 },
+    "run_id": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string" },
+    "risks": { "type": "array", "items": { "$ref": "#/$defs/risk" } },
+    "questions": { "type": "array", "items": { "$ref": "#/$defs/question" } },
+    "evidence_boundaries": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  },
+  "$defs": {
+    "risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["risk_id", "title", "priority", "evidence_type", "why_relevant", "test_points", "source_ids"],
+      "properties": {
+        "risk_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "priority": { "enum": ["high", "medium", "low"] },
+        "evidence_type": { "enum": ["direct_history", "related_history", "business_rule", "requirement_risk", "test_inference"] },
+        "why_relevant": { "type": "string", "minLength": 1 },
+        "test_points": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "source_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question", "impact", "recommended_answer", "basis"],
+      "properties": {
+        "question": { "type": "string", "minLength": 1 },
+        "impact": { "type": "string", "minLength": 1 },
+        "recommended_answer": { "type": "string", "minLength": 1 },
+        "basis": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

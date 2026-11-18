@@ -1,0 +1,7 @@
+interface:
+  display_name: "QA Radar Testcase Generator"
+  short_description: "Generate testcases from a canonical radar handoff"
+  default_prompt: "Use $qa-testcase-generator-radar with the canonical radar result supplied by $risk-radar-testcase-workflow."
+
+policy:
+  allow_implicit_invocation: false
