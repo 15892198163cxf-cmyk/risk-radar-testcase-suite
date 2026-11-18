@@ -5,4 +5,5 @@ __pycache__/
 ziniao-landmine-map/data/*
 !ziniao-landmine-map/data/query_aliases.yaml
 !ziniao-landmine-map/data/recall_rules.yaml
+!ziniao-landmine-map/data/normalized_bugs.jsonl
 ziniao-landmine-map/scripts/fixtures/
